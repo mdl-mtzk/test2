@@ -11,9 +11,9 @@
         src="shoulder bag.glb"
         alt="A 3D model"
         auto-rotate
-        maxPolarAngle=45
-        minPolarAngle=0
         camera-controls
+        maxPolarAngle: {default: AFRAME.utils.device.isMobile() ? 30 : 45},
+        minPolarAngle: {default: 0},
         interaction-prompt="auto"
         ar 
         magic-leap 
