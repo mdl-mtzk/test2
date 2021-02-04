@@ -7,16 +7,27 @@
   <body>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js">
     </script>
+    
     <style>
+      button{
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: blue;
+    box-sizing: border-box;
+    }
+      
     button[slot="hotspot-360"]{
     --min-hotspot-opacity: 0;
     background-color: red;
-  }
+    }
     </style>
+    
     <model-viewer
         src="building_test02.glb"
         alt="A 3D model"
-        
         auto-rotate
         camera-controls
         maxPolarAngle= 30 * 45;
@@ -25,6 +36,11 @@
         ar 
         magic-leap 
         style="width:1000px;height:1200px;"
-    ></model-viewer>
+    >
+      
+    <button slot="hotspot-hand" data-position="0.0 0.0 4.2" data-normal="-0.73 0.05 0.69">
+  </button>
+      
+    </model-viewer>
   </body>
 </html>
