@@ -5,9 +5,11 @@
     <title>model-viewer demo</title>
   </head>
   <body>
+    <!--modelviewerスクリプトの読み込み-->
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js">
     </script>
     
+    <!--ボタンの設定-->
     <style>
       button{
     display: block;
@@ -25,6 +27,7 @@
     }
     </style>
     
+    <!--モデルの読み込み　カメラの設定-->
     <model-viewer
         src="building_test02.glb"
         alt="A 3D model"
@@ -38,7 +41,8 @@
         style="width:1000px;height:1200px;"
     >
       
-    <button slot="hotspot-hand" data-position="0.0 0.0 4.2" data-normal="-0.73 0.05 0.69">
+      <!--ボタンの配置-->
+    <button slot="hotspot-hand" data-position="0.0 4.2 0.0" data-normal="-0.73 0.05 0.69">
   </button>
       
     </model-viewer>
