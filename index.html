@@ -7,9 +7,17 @@
   <body>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js">
     </script>
+    <style>
+    button[slot="hotspot-360"]{
+    --min-hotspot-opacity: 0;
+    background-color: red;
+  }
+    </style>
     <model-viewer
         src="building_test02.glb"
         alt="A 3D model"
+        <button slot="hotspot-360" data-position="-0.54 0.93 0.1" data-normal="-0.73 0.05 0.69">
+        </button>
         auto-rotate
         camera-controls
         maxPolarAngle= 30 * 45;
